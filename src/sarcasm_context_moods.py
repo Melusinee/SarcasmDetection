@@ -24,7 +24,6 @@ from keras.layers.merge import add, concatenate
 from keras.models import Model
 from keras.utils import np_utils
 from keras.layers import Input
-from .. import src
 import src.data_processing.data_handler as dh
 from collections import defaultdict
 
