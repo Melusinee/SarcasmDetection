@@ -302,7 +302,7 @@ if __name__ == "__main__":
     model_file = basepath + '/resource/text_model/weights/'
     vocab_file_path = basepath + '/resource/text_model/vocab_list.txt'
 
-    word2vec_path = basepath + '/resource/text_model/GoogleNews-vectors-negative300.bin'
+    word2vec_path = basepath + '/resource/text_model/weights/GoogleNews-vectors-negative300.bin'
 
     # uncomment for training
     tr = train_model(train_file=train_file, validation_file=validation_file, word_file_path=word_file_path,
