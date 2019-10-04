@@ -3,7 +3,7 @@ import collections
 import random
 import sys
 
-sys.path.append('../../')
+sys.path.append('../')
 
 import time
 import numpy
@@ -24,8 +24,8 @@ from keras.layers.merge import add, concatenate
 from keras.models import Model
 from keras.utils import np_utils
 from keras.layers import Input
-import src.data_processing.data_handler as dh
 from collections import defaultdict
+import src.data_processing.data_handler as dh
 
 
 class sarcasm_model():
@@ -372,7 +372,7 @@ class test_model(sarcasm_model):
 
 if __name__ == "__main__":
     basepath = os.getcwd()[:os.getcwd().rfind('/')]
-    train_file = basepath + '/resource/train/Train_context_moods.txt'
+    train_file = basepath + '/resource/train/Train_v1.txt'
     validation_file = basepath + '/resource/dev/Dev_context_moods.txt'
     test_file = basepath + '/resource/test/Test_context_AW.txt'
     word_file_path = basepath + '/resource/word_list_freq.txt'
@@ -383,7 +383,7 @@ if __name__ == "__main__":
     emoji_file_path = basepath + '/resource/emoji_unicode_names_final.txt'
 
     # word2vec path
-    word2vec_path = '/home/aghosh/backups/GoogleNews-vectors-negative300.bin'
+    word2vec_path = basepath + '/resource/text_model/weights/GoogleNews-vectors-negative300.bin'
 
     tr = train_model(train_file=train_file, validation_file=validation_file, word_file_path=word_file_path,
                      split_word_path=split_word_path, emoji_file_path=emoji_file_path, model_file=model_file,
