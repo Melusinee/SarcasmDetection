@@ -150,7 +150,7 @@ class train_model(sarcasm_model):
         early_stopping = EarlyStopping(monitor='val_loss', patience=20, verbose=1)
 
         # training
-        model.fit(X, Y, batch_size=64, epochs=100, validation_data=(tX, tY), shuffle=True,
+        model.fit(X, Y, batch_size=64, epochs=10, validation_data=(tX, tY), shuffle=True,
                   callbacks=[save_best, save_all, early_stopping], class_weight=ratio, verbose=2)
 
     def load_train_validation_data(self):
