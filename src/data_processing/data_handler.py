@@ -157,9 +157,9 @@ def split_hashtags(term, wordlist, split_word_list, dump_file=''):
     words = [str(s) for s in words]
 
     # dumping splits for debug
-    with open(dump_file, 'a') as f:
-        if (term != '' and len(words) > 0):
-            f.write('#' + str(term).strip() + '\t' + ' '.join(words) + '\t' + str(n_splits) + '\n')
+#     with open(dump_file, 'a') as f:
+#         if (term != '' and len(words) > 0):
+#             f.write('#' + str(term).strip() + '\t' + ' '.join(words) + '\t' + str(n_splits) + '\n')
 
     return words
 
