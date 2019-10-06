@@ -164,7 +164,7 @@ def split_hashtags(term, wordlist, split_word_list, dump_file=''):
     return words
 
 
-def load_abbreviation(path='../resource/abbreviations.txt'):
+def load_abbreviation(path='../SarcasmDetection//resource/abbreviations.txt'):
     abbreviation_dict = defaultdict()
     with open(path) as f:
         lines = f.readlines()
