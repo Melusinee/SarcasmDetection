@@ -216,7 +216,7 @@ def filter_text(text, word_list, split_word_list, emoji_dict, abbreviation_dict,
 
         # splitting hastags
         if (split_hashtag and str(t).startswith("#")):
-            splits = split_hashtags(t, word_list, split_word_list, dump_file='/SarcasmDetection/resource/hastash_split_dump.txt')
+            splits = split_hashtags(t, word_list, split_word_list, dump_file='')
             # adding the hashtags
             if (splits != None):
                 filtered_text.extend([s for s in splits if (not filtered_text.__contains__(s))])
